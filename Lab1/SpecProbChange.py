@@ -1,4 +1,4 @@
-class Spec_Prob_Change:
+class SpecProbChange:
     def __init__(self, initialState, finalState):
         self.initialState = initialState
         self.finalState = finalState
