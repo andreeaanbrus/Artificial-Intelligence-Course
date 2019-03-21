@@ -1,9 +1,12 @@
 class UI:
     def __init__(self, controller):
-        self._controller = controller
+        self.controller = controller
 
     def mainMenu(self):
-        print("Hello")
+        print("dfs")
+        print(self.controller.dfs())
+        print("gbfs")
+        print(self.controller.gbfs())
 
 
 
