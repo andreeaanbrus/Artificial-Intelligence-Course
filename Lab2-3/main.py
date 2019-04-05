@@ -16,6 +16,7 @@ def main():
     individ8 = Individ(g)
     individ9 = Individ(g)
     p = Population(9, [individ, individ2, individ3, individ4, individ5, individ6, individ7, individ8, individ9])
-    a = Algorithm(g, p, 0.4, 10)
+    a = Algorithm(g, p, 0.03, 100)
     a.run()
+
 main()

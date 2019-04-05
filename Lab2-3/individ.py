@@ -31,7 +31,6 @@ class Individ:
 
         if probability < 0.05:
             position = randint(0, self.size-1)
-            print(position)
             if self.array[position] == 0:
                 self.array[position] = 1
             else:

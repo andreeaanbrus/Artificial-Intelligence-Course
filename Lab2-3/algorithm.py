@@ -1,4 +1,5 @@
 import numpy
+import matplotlib.pyplot as plt
 
 
 class Algorithm:
@@ -24,10 +25,19 @@ class Algorithm:
             self.population.listOfIndivids.append(c)
 
     def run(self):
+        fitness_history = []
         while self.iterations != 0:
             self.iteration()
             self.iterations -= 1
             for i in self.population.selection(self.population.noOfIndivids):
-                    print(i.array)
+                print(i.array)
+                fitness_history.append(i.fitness())
+                if i.fitness() == 1:
+                    plt.plot(fitness_history)
+                    plt.ylabel('Fitness history')
+                    plt.show()
                     return i
+        plt.plot(fitness_history)
+        plt.ylabel('Fitness history')
+        plt.show()
         return None
