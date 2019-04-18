@@ -1,0 +1,16 @@
+from controller import Controller
+from particle import Particle
+from problem import Problem
+from swarm import Swarm
+
+p = Problem()
+p1 = Particle(p)
+p2 = Particle(p)
+p3 = Particle(p)
+p4 = Particle(p)
+p5 = Particle(p)
+particles = [p1, p2, p3, p4, p5]
+pn = 5
+s = Swarm(pn, particles, 2)
+controller = Controller(s, 20)
+print(controller.runAlg())
